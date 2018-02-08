@@ -34,9 +34,18 @@
         }
 
         .navbar {
+            position: static;
             background: linear-gradient(to bottom, rgba(252, 236, 252, 1) 0%, rgba(251, 166, 225, 1) 50%, rgba(239, 196, 239, 1) 100%);
-            max-width: 100%;
+            width: 100%;
             /* position: fixed; */
+        }
+
+        .navbar.fixed {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
         }
 
         .navbar .container ul {
@@ -349,13 +358,11 @@
         .b_3logo,
         .b_4logo,
         .b_5logo {
-            /* width: 250px; */
             height: 100px;
             text-align: center;
-            /* margin: 0 auto; */
-            /* margin-top: 1%; */
-            /* padding: 10px 0; */
         }
+
+
 
         .b_1logo img,
         .b_2logo img,
@@ -427,6 +434,7 @@
             height: 100%;
             display: inline-block;
             margin: 0 8px;
+            cursor: pointer;
         }
 
         .bandpic_1,
@@ -443,7 +451,7 @@
             height: 50vh;
         }
 
-        .swiper-slide  {
+        .swiper-slide {
             width: 1050px;
             font-size: 30px;
             transition: all .3s;
@@ -477,18 +485,30 @@
             right: 0;
         }
 
-        .ss_slider1, .ss_slider2, .ss_slider3, .ss_slider4, .ss_slider5 {
+        .ss_slider1,
+        .ss_slider2,
+        .ss_slider3,
+        .ss_slider4,
+        .ss_slider5 {
             transform: scale(0.7);
         }
 
-        .s_slider1, .s_slider2, .s_slider3, .s_slider4, .s_slider5 {
+        .s_slider1,
+        .s_slider2,
+        .s_slider3,
+        .s_slider4,
+        .s_slider5 {
             transform: scale(0.8);
         }
 
-        .m_slider1, .m_slider2, .m_slider3, .m_slider4, .m_slider5 {
+        .m_slider1,
+        .m_slider2,
+        .m_slider3,
+        .m_slider4,
+        .m_slider5 {
             transform: scale(0.9);
         }
-        
+
         .music_bottom {
             position: absolute;
             width: 100%;
@@ -496,7 +516,11 @@
             z-index: 1;
         }
 
-        .page1.active,.page2.active,.page3.active,.page4.active, .page5.active {
+        .page1.active,
+        .page2.active,
+        .page3.active,
+        .page4.active,
+        .page5.active {
             opacity: 1;
             z-index: 2;
         }
@@ -576,62 +600,70 @@
         .clearfix {
             clear: both;
         }
-        @media screen and (max-width:1400px){
-            .music{
+
+
+        .logohover:hover {
+            transform: scale(1.2);
+        }
+
+        @media screen and (max-width:1400px) {
+            .music {
                 height: 1040px;
             }
         }
     </style>
 </head>
 
-<body data-target="#navbar-spy" data-spy="scroll">
-    <div class="bannerfont"></div>
-    <div class="banner">
-        <div class="bannermeber1" data-aos="fade-up-right" data-aos-easing="ease-in-out-quart" data-aos-duration="600" data-aos-offset="0">
-            <img src="img/bannermeber1.png" alt="">
-        </div>
-        <div class="bannermeber2" data-aos="fade-down-right" data-aos-easing="ease-in-out-quart" data-aos-duration="700" data-aos-delay="500"
-            data-aos-offset="0">
-            <img src="img/bannermeber2.png" alt="">
-        </div>
-        <div class="bannermeber3" data-aos="zoom-in-up" data-aos-easing="ease-in-out-quart" data-aos-duration="800" data-aos-delay="1000"
-            data-aos-offset="0">
-            <img src="img/bannermeber3.png" alt="">
-        </div>
-        <div class="bannermeber4" data-aos="fade-down-left" data-aos-easing="ease-in-out-quart" data-aos-duration="700" data-aos-delay="500"
-            data-aos-offset="0">
-            <img src="img/bannermeber4.png" alt="">
-        </div>
-        <div class="bannermeber5" data-aos="fade-up-left" data-aos-easing="ease-in-out-quart" data-aos-duration="600" data-aos-offset="0">
-            <img src="img/bannermeber5.png" alt="">
-        </div>
-        <div class="bannerlogo" data-aos="zoom-out-down" data-aos-easing="ease-in-out-quart" data-aos-duration="1000" data-aos-delay="1500"
-            data-aos-offset="0">
-            <img src="img/Logo.png" alt="">
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="section1">
-            <div class="sec-left">
-                <div class="pv">PV</div>
-                <div class="pvutobe"></div>
+<body>
+    <div class="bannerall">
+        <div class="bannerfont"></div>
+        <div class="banner">
+            <div class="bannermeber1" data-aos="fade-up-right" data-aos-easing="ease-in-out-quart" data-aos-duration="600" data-aos-offset="0">
+                <img src="img/bannermeber1.png" alt="">
             </div>
-            <div class="sec-right">
-                <p>NEWS</p>
-                <div class="news">
-                    <ul>
-                        <li>
-                            <span class="red">2017.10.03</span>&nbsp;&nbsp;全日本都在瘋《BanG Dream! 少女樂團派對》中文版台港澳正式登場！</li>
-                        <li>
-                            <span class="red">2017.08.31</span>&nbsp;&nbsp;萬人樂團大募集《BanG Dream! 少女樂團派對》大家一起LIVE吧！</li>
-                    </ul>
+            <div class="bannermeber2" data-aos="fade-down-right" data-aos-easing="ease-in-out-quart" data-aos-duration="700" data-aos-delay="500"
+                data-aos-offset="0">
+                <img src="img/bannermeber2.png" alt="">
+            </div>
+            <div class="bannermeber3" data-aos="zoom-in-up" data-aos-easing="ease-in-out-quart" data-aos-duration="800" data-aos-delay="1000"
+                data-aos-offset="0">
+                <img src="img/bannermeber3.png" alt="">
+            </div>
+            <div class="bannermeber4" data-aos="fade-down-left" data-aos-easing="ease-in-out-quart" data-aos-duration="700" data-aos-delay="500"
+                data-aos-offset="0">
+                <img src="img/bannermeber4.png" alt="">
+            </div>
+            <div class="bannermeber5" data-aos="fade-up-left" data-aos-easing="ease-in-out-quart" data-aos-duration="600" data-aos-offset="0">
+                <img src="img/bannermeber5.png" alt="">
+            </div>
+            <div class="bannerlogo" data-aos="zoom-out-down" data-aos-easing="ease-in-out-quart" data-aos-duration="1000" data-aos-delay="1500"
+                data-aos-offset="0">
+                <img src="img/Logo.png" alt="">
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section1">
+                <div class="sec-left">
+                    <div class="pv">PV</div>
+                    <div class="pvutobe"></div>
                 </div>
-                <div class="applestore">
-                    <img src="img/applestore.svg" alt="">
-                </div>
-                <div class="googlestores">
-                    <img src="img/googlestore.svg" alt="">
+                <div class="sec-right">
+                    <p>NEWS</p>
+                    <div class="news">
+                        <ul>
+                            <li>
+                                <span class="red">2017.10.03</span>&nbsp;&nbsp;全日本都在瘋《BanG Dream! 少女樂團派對》中文版台港澳正式登場！</li>
+                            <li>
+                                <span class="red">2017.08.31</span>&nbsp;&nbsp;萬人樂團大募集《BanG Dream! 少女樂團派對》大家一起LIVE吧！</li>
+                        </ul>
+                    </div>
+                    <div class="applestore">
+                        <img src="img/applestore.svg" alt="">
+                    </div>
+                    <div class="googlestores">
+                        <img src="img/googlestore.svg" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -651,11 +683,14 @@
             </ul>
         </div>
     </nav>
+    <div class="backtotop">
+        <img src="" alt="">
+    </div>
     <div class="about" id="about">
         <div id="carousel">
             <figure>
                 <p style="font-size:4.167vw; color:#fff; margin-bottom:3.646vw; font-weight:900;">Story</p>
-                <p >身為剛開張的音樂展演空間工作人員</p>
+                <p>身為剛開張的音樂展演空間工作人員</p>
                 <p>所受到的使命是...</p>
                 <p style="font-size:2.083vw; color:navy; font-weight:900;">"讓音樂展演空間更加熱絡"</p>
                 <P>將與從事樂團活動的女孩相遇</P>
@@ -680,31 +715,31 @@
     <!-- <div class="swiper-pagination"></div> -->
     <div class="bands" id="bands">
         <div class="band_1 band_1_1" id="band_1">
-            <div class="b_1logo">
+            <div class="b_1logo logohover">
                 <img src="img/Poppin_party_logo.png" alt="">
             </div>
             <div class="b_1member">
-                <div class="b_1member1 picw">
+                <div class="b_1member1 picw logohover">
                     <a href="img/pppcard01.png" data-lightbox="image-1">
                         <img src="img/b1m1.png" alt="">
                     </a>
                 </div>
-                <div class="b_1member2 picw">
+                <div class="b_1member2 picw logohover">
                     <a href="img/pppcard02.png" data-lightbox="image-1">
                         <img src="img/b1m2.png" alt="">
                     </a>
                 </div>
-                <div class="b_1member3 picw">
+                <div class="b_1member3 picw logohover">
                     <a href="img/pppcard03.png" data-lightbox="image-1">
                         <img src="img/b1m3.png" alt="">
                     </a>
                 </div>
-                <div class="b_1member4 picw">
+                <div class="b_1member4 picw logohover">
                     <a href="img/pppcard04.png" data-lightbox="image-1">
                         <img src="img/b1m4.png" alt="">
                     </a>
                 </div>
-                <div class="b_1member5 picw">
+                <div class="b_1member5 picw logohover">
                     <a href="img/pppcard05.png" data-lightbox="image-1">
                         <img src="img/b1m5.png" alt="">
                     </a>
@@ -712,31 +747,31 @@
             </div>
         </div>
         <div class="band_2 band_2_1" id="band_2">
-            <div class="b_2logo">
+            <div class="b_2logo logohover">
                 <img src="img/Afterglow_logo.png" alt="">
             </div>
             <div class="b_2member">
-                <div class="b_2member1 picw">
+                <div class="b_2member1 picw logohover">
                     <a href="img/aftercard01.png" data-lightbox="image-1">
                         <img src="img/b2m1.png" alt="">
                     </a>
                 </div>
-                <div class="b_2member2 picw">
+                <div class="b_2member2 picw logohover">
                     <a href="img/aftercard02.png" data-lightbox="image-1">
                         <img src="img/b2m2.png" alt="">
                     </a>
                 </div>
-                <div class="b_2member3 picw">
+                <div class="b_2member3 picw logohover">
                     <a href="img/aftercard03.png" data-lightbox="image-1">
                         <img src="img/b2m3.png" alt="">
                     </a>
                 </div>
-                <div class="b_2member4 picw">
+                <div class="b_2member4 picw logohover">
                     <a href="img/aftercard04.png" data-lightbox="image-1">
                         <img src="img/b2m4.png" alt="">
                     </a>
                 </div>
-                <div class="b_2member5 picw">
+                <div class="b_2member5 picw logohover">
                     <a href="img/aftercard05.png" data-lightbox="image-1">
                         <img src="img/b2m5.png" alt="">
                     </a>
@@ -744,31 +779,31 @@
             </div>
         </div>
         <div class="band_3 band_3_1" id="band_3">
-            <div class="b_3logo">
+            <div class="b_3logo logohover">
                 <img src="img/Pastel_palettes_logo.png" alt="">
             </div>
             <div class="b_3member">
-                <div class="b_3member1 picw">
+                <div class="b_3member1 picw logohover">
                     <a href="img/pastelcard01.png" data-lightbox="image-1">
                         <img src="img/b3m1.png" alt="">
                     </a>
                 </div>
-                <div class="b_3member2 picw">
+                <div class="b_3member2 picw logohover">
                     <a href="img/pastelcard02.png" data-lightbox="image-1">
                         <img src="img/b3m2.png" alt="">
                     </a>
                 </div>
-                <div class="b_3member3 picw">
+                <div class="b_3member3 picw logohover">
                     <a href="img/pastelcard03.png" data-lightbox="image-1">
                         <img src="img/b3m3.png" alt="">
                     </a>
                 </div>
-                <div class="b_3member4 picw">
+                <div class="b_3member4 picw logohover">
                     <a href="img/pastelcard04.png" data-lightbox="image-1">
                         <img src="img/b3m4.png" alt="">
                     </a>
                 </div>
-                <div class="b_3member5 picw">
+                <div class="b_3member5 picw logohover">
                     <a href="img/pastelcard05.png" data-lightbox="image-1">
                         <img src="img/b3m5.png" alt="">
                     </a>
@@ -776,31 +811,31 @@
             </div>
         </div>
         <div class="band_4 band_4_1" id="band_4">
-            <div class="b_4logo">
+            <div class="b_4logo logohover">
                 <img src="img/Roselia_logo.png" alt="">
             </div>
             <div class="b_4member">
-                <div class="b_4member1 picw">
+                <div class="b_4member1 picw logohover">
                     <a href="img/roseliacard01.png" data-lightbox="image-1">
                         <img src="img/b4m1.png" alt="">
                     </a>
                 </div>
-                <div class="b_4member2 picw">
+                <div class="b_4member2 picw logohover">
                     <a href="img/roseliacard02.png" data-lightbox="image-1">
                         <img src="img/b4m2.png" alt="">
                     </a>
                 </div>
-                <div class="b_4member3 picw">
+                <div class="b_4member3 picw logohover">
                     <a href="img/roseliacard03.png" data-lightbox="image-1">
                         <img src="img/b4m3.png" alt="">
                     </a>
                 </div>
-                <div class="b_4member4 picw">
+                <div class="b_4member4 picw logohover">
                     <a href="img/roseliacard04.png" data-lightbox="image-1">
                         <img src="img/b4m4.png" alt="">
                     </a>
                 </div>
-                <div class="b_4member5 picw">
+                <div class="b_4member5 picw logohover">
                     <a href="img/roseliacard05.png" data-lightbox="image-1">
                         <img src="img/b4m5.png" alt="">
                     </a>
@@ -808,31 +843,31 @@
             </div>
         </div>
         <div class="band_5 band_5_1" id="band_5">
-            <div class="b_5logo">
+            <div class="b_5logo logohover">
                 <img src="img/Hello_happy_world_logo.png" alt="">
             </div>
             <div class="b_5member">
-                <div class="b_5member1 picw">
+                <div class="b_5member1 picw logohover">
                     <a href="img/happycard01.png" data-lightbox="image-1">
                         <img src="img/b5m1.png" alt="">
                     </a>
                 </div>
-                <div class="b_5member2 picw">
+                <div class="b_5member2 picw logohover">
                     <a href="img/happycard02.png" data-lightbox="image-1">
                         <img src="img/b5m2.png" alt="">
                     </a>
                 </div>
-                <div class="b_5member3 picw">
+                <div class="b_5member3 picw logohover">
                     <a href="img/happycard03.png" data-lightbox="image-1">
                         <img src="img/b5m3.png" alt="">
                     </a>
                 </div>
-                <div class="b_5member4 picw">
+                <div class="b_5member4 picw logohover">
                     <a href="img/happycard04.png" data-lightbox="image-1">
                         <img src="img/b5m4.png" alt="">
                     </a>
                 </div>
-                <div class="b_5member5 picw">
+                <div class="b_5member5 picw logohover">
                     <a href="img/happycard05.png" data-lightbox="image-1">
                         <img src="img/b5m5.png" alt="">
                     </a>
@@ -843,19 +878,19 @@
 
     <div class="music" id="music">
         <div class="music_top">
-            <div class="m_1logo">
+            <div class="m_1logo logohover">
                 <img src="img/Poppin_party_logo.png" alt="">
             </div>
-            <div class="m_2logo">
+            <div class="m_2logo logohover">
                 <img src="img/Afterglow_logo.png" alt="">
             </div>
-            <div class="m_3logo">
+            <div class="m_3logo logohover">
                 <img src="img/Pastel_palettes_logo.png" alt="">
             </div>
-            <div class="m_4logo">
+            <div class="m_4logo logohover">
                 <img src="img/Roselia_logo.png" alt="">
             </div>
-            <div class="m_5logo">
+            <div class="m_5logo logohover">
                 <img src="img/Hello_happy_world_logo.png" alt="">
             </div>
         </div>
@@ -867,55 +902,47 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Yes! BanG_Dream!
+                            <audio id="music_1" src="music/ppp/Yes!_BanG_Dream!_(Game_Version).oga" style="display:none"></audio>Yes! BanG_Dream!
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
                         </div>
                     </div>
-                    <div class="swiper-slide slidepage1 s_slider1" >
+                    <div class="swiper-slide slidepage1 s_slider1">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>ぽっぴん’しゃっふる
+                            <audio id="music_1" src="music/ppp/Poppin'_Shuffle_(Game_Version).oga" style="display:none"></audio>ぽっぴん’しゃっふる
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
                         </div>
                     </div>
-                    <div class="swiper-slide slidepage1 m_slider1" >
+                    <div class="swiper-slide slidepage1 m_slider1">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>STAR BEAT!〜ホシノコドウ〜
+                            <audio id="music_1" src="music/ppp/STAR_BEAT__Hoshi_no_Kodou__(Game_Version).oga" style="display:none"></audio>STAR BEAT!〜ホシノコドウ〜
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
                         </div>
                     </div>
                     <div class="swiper-slide slidepage1">
-                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>夏空 SUN! SUN! SEVEN!
+                        <div class="bg-img1">
+                            <audio id="music_1" src="music/ppp/Natsuzora_SUN!_SUN!_SEVEN!_(Game_Version).oga" style="display:none"></audio>夏空 SUN! SUN! SEVEN!
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
                         </div>
                     </div>
-                    <div class="swiper-slide slidepage1 m_slider1" >
+                    <div class="swiper-slide slidepage1 m_slider1">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>走り始めたばかりのキミに
+                            <audio id="music_1" src="music/ppp/Hashiri_Hajimeta_Bakari_no_Kimi_ni_(Game_Version).oga" style="display:none"></audio>走り始めたばかりのキミに
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
                         </div>
                     </div>
-                    <div class="swiper-slide slidepage1 s_slider1" >
+                    <div class="swiper-slide slidepage1 s_slider1">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>ティアドロップス
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage1 ss_slider1 ">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>ときめきエクスペリエンス！
+                            <audio id="music_1" src="music/ppp/Teardrops_(Game_Version).oga" style="display:none"></audio>ティアドロップス
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -923,7 +950,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>1000回潤んだ空
+                            <audio id="music_1" src="music/ppp/Tokimeki_Experience_(Game_Version).oga" style="display:none"></audio>ときめきエクスペリエンス！
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -931,7 +958,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>キラキラだとか夢だとか ～Sing Girls～
+                            <audio id="music_1" src="music/ppp/1000-kai_Urunda_Sora_(Game_Version).oga" style="display:none"></audio>1000回潤んだ空
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -939,7 +966,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>前へススメ！
+                            <audio id="music_1" src="music/ppp/Kirakira_Datoka_Yume_Datoka__Sing_Girls__(Game_Version).oga" style="display:none"></audio>キラキラだとか夢だとか ～Sing Girls～
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -947,7 +974,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>夢みるSunflower
+                            <audio id="music_1" src="music/ppp/Mae_e_Susume!_(Game_Version).oga" style="display:none"></audio>前へススメ！
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -955,7 +982,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>キミにもらったもの
+                            <audio id="music_1" src="music/ppp/Yumemiru_Sunflower_(Game_Version).oga" style="display:none"></audio>夢みるSunflower
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -963,7 +990,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>八月のif
+                            <audio id="music_1" src="music/ppp/Kirakira_Datoka_Yume_Datoka__Sing_Girls__(Game_Version).oga" style="display:none"></audio>キミにもらったもの
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -971,7 +998,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Time Lapse
+                            <audio id="music_1" src="music/ppp/Hachigatsu_no_if_(Game_Version).oga" style="display:none"></audio>八月のif
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -979,7 +1006,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>クリスマスのうた
+                            <audio id="music_1" src="music/ppp/Time_Lapse_(Game_Version).oga" style="display:none"></audio>Time Lapse
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -987,7 +1014,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>B.O.F
+                            <audio id="music_1" src="music/ppp/kurisumasunouta.oga" style="display:none"></audio>クリスマスのうた
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -995,7 +1022,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>CiRCLING
+                            <audio id="music_1" src="music/ppp/B.O.F .oga" style="display:none"></audio>B.O.F
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1003,7 +1030,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>どきどきSING OUT!
+                            <audio id="music_1" src="music/ppp/CiRCLING.oga" style="display:none"></audio>CiRCLING
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1011,7 +1038,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Don’t be afraid!
+                            <audio id="music_1" src="music/ppp/Dokidoki_SING_OUT!_(Game_Version).oga" style="display:none"></audio>どきどきSING OUT!
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1019,7 +1046,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>花園電気ギター！！！
+                            <audio id="music_1" src="music/ppp/Don't_be_afraid.oga" style="display:none"></audio>Don’t be afraid!
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1027,7 +1054,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>チョコレイトの低音レシピ
+                            <audio id="music_1" src="music/ppp/Hanazono_Denki_Guitar!!!_(Game_Version).oga" style="display:none"></audio>花園電気ギター！！！
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1035,7 +1062,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>遠い音楽～ハートビート～
+                            <audio id="music_1" src="music/ppp/Chocolate_no_Teion_Recipe_(Game_Version).oga" style="display:none"></audio>チョコレイトの低音レシピ
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1043,7 +1070,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>す、好きなんかじゃない！
+                            <audio id="music_1" src="music/ppp/Tooi_Ongaku__Heartbeat__(Game_Version).oga" style="display:none"></audio>遠い音楽～ハートビート～
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1051,7 +1078,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Happy Happy Party！
+                            <audio id="music_1" src="music/ppp/Su-Suki Nanka Janai!.oga" style="display:none"></audio>す、好きなんかじゃない！
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1059,7 +1086,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>夏のドーン！
+                            <audio id="music_1" src="music/ppp/Happy_Happy_Party!_(Game_Version).oga" style="display:none"></audio>Happy Happy Party！
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1067,7 +1094,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>空色デイズ（作詞：meg rock　作曲：齋藤真也）
+                            <audio id="music_1" src="music/ppp/Natsunodon!_(Game_Version).oga" style="display:none"></audio>夏のドーン！
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1075,7 +1102,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Alchemy（作詞・作曲：麻枝准）
+                            <audio id="music_1" src="music/ppp/Sorairo_Days_(Game_Version).oga" style="display:none"></audio>空色デイズ（作詞：meg rock　作曲：齋藤真也）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1083,7 +1110,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>光るなら（作詞・作曲：Goose house）
+                            <audio id="music_1" src="music/ppp/Alchemy_(Game_Version).oga" style="display:none"></audio>Alchemy（作詞・作曲：麻枝准）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1091,7 +1118,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Little Busters!（作詞・作曲：麻枝准）
+                            <audio id="music_1" src="music/ppp/Hikaru_Nara_(Game_Version).oga" style="display:none"></audio>光るなら（作詞・作曲：Goose house）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1099,7 +1126,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>正解はひとつ!じゃない!!（作詞：畑亜貴　作曲：山口朗彦）
+                            <audio id="music_1" src="music/ppp/Little_Busters!_(Game_Version).oga" style="display:none"></audio>Little Busters!（作詞・作曲：麻枝准）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1107,7 +1134,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>God knows…（作詞：畑亜貴　作曲：神前暁）
+                            <audio id="music_1" src="music/ppp/Seikai_wa_Hitotsu!_Janai!!_(Game_Version).oga" style="display:none"></audio>正解はひとつ!じゃない!!（作詞：畑亜貴　作曲：山口朗彦）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1115,7 +1142,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>only my railgun（作詞：八木沼悟志/yuki-ka　作曲：八木沼悟志）
+                            <audio id="music_1" src="music/ppp/God_knows..._(Game_Version).oga" style="display:none"></audio>God knows…（作詞：畑亜貴　作曲：神前暁）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1123,7 +1150,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>千本桜（作詞・作曲：黒うさP）
+                            <audio id="music_1" src="music/ppp/Only_my_railgun_(Game_Version).oga" style="display:none"></audio>only my railgun（作詞：八木沼悟志/yuki-ka　作曲：八木沼悟志）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1131,7 +1158,7 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>君じゃなきゃダメみたい（作詞・作曲：大石昌良）
+                            <audio id="music_1" src="music/ppp/Senbonzakura_(Game_Version).oga" style="display:none"></audio>千本桜（作詞・作曲：黒うさP）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1139,7 +1166,15 @@
                     </div>
                     <div class="swiper-slide slidepage1 ss_slider1 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>メランコリック（作詞・作曲：Junky）
+                            <audio id="music_1" src="music/ppp/Kimi_Janakya_Dame_Mitai.oga" style="display:none"></audio>君じゃなきゃダメみたい（作詞・作曲：大石昌良）
+                            <button class="btn music-btn" data-musicId="1">
+                                <i class="far fa-play-circle fa-2x"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slidepage1 ss_slider1 ">
+                        <div class="bg-img1">
+                            <audio id="music_1" src="music/ppp/Melancholic.oga" style="display:none"></audio>メランコリック（作詞・作曲：Junky）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1157,7 +1192,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide slidepage2 ss_slider2 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Yes! BanG_Dream!
+                            <audio id="music_1" src="music/after/That_Is_How_I_Roll!_(Game_Version).oga" style="display:none"></audio>That Is How I Roll!
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1165,7 +1200,7 @@
                     </div>
                     <div class="swiper-slide slidepage2 s_slider2">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>ぽっぴん’しゃっふる
+                            <audio id="music_1" src="music/after/Scarlet_Sky_(Game_Version).oga" style="display:none"></audio>Scarlet Sky
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1173,7 +1208,7 @@
                     </div>
                     <div class="swiper-slide slidepage2 m_slider2">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>STAR BEAT!〜ホシノコドウ〜
+                            <audio id="music_1" src="music/after/True_color_(Game_Version).oga" style="display:none"></audio>True color
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1181,7 +1216,7 @@
                     </div>
                     <div class="swiper-slide slidepage2">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>夏空 SUN! SUN! SEVEN!
+                            <audio id="music_1" src="music/after/Hey-day_Capriccio_(Game_Version).oga" style="display:none"></audio>Hey-day狂騒曲（カプリチオ）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1189,7 +1224,7 @@
                     </div>
                     <div class="swiper-slide slidepage2 m_slider2">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>走り始めたばかりのキミに
+                            <audio id="music_1" src="music/after/Y.O.L.O!!!!!.oga" style="display:none"></audio>Y.O.L.O!!!!!
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1197,7 +1232,7 @@
                     </div>
                     <div class="swiper-slide slidepage2 s_slider2">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>ティアドロップス
+                            <audio id="music_1" src="music/after/Karma_(Game_Version).oga" style="display:none"></audio>カルマ（作詞・作曲：藤原基央）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1205,7 +1240,7 @@
                     </div>
                     <div class="swiper-slide slidepage2 ss_slider2">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>ときめきエクスペリエンス！
+                            <audio id="music_1" src="music/after/Butter-Fly_(Game_Version).oga" style="display:none"></audio>Butter-Fly（作詞・作曲：千綿偉功）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1213,7 +1248,7 @@
                     </div>
                     <div class="swiper-slide slidepage2 ss_slider2">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>1000回潤んだ空
+                            <audio id="music_1" src="music/after/Don't_say_lazy_(Game_Version).oga" style="display:none"></audio>Don’t say “lazy”（作詞：大森祥子　作曲：前澤寛之）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1221,7 +1256,7 @@
                     </div>
                     <div class="swiper-slide slidepage2 ss_slider2">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>キラキラだとか夢だとか ～Sing Girls～
+                            <audio id="music_1" src="music/after/Tentai_Kansoku_(Game_Version).oga" style="display:none"></audio>天体観測（作詞・作曲：藤原基央）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1229,7 +1264,7 @@
                     </div>
                     <div class="swiper-slide slidepage2 ss_slider2">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>前へススメ！
+                            <audio id="music_1" src="music/after/Great_escape_(Game_Version).oga" style="display:none"></audio>great escape（作詞：三島想平　作曲：cinema staff）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1237,7 +1272,7 @@
                     </div>
                     <div class="swiper-slide slidepage2 ss_slider2">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>夢みるSunflower
+                            <audio id="music_1" src="music/after/Asu_no_Yozora_Shoukaihan_(Game_Version).oga" style="display:none"></audio>アスノヨゾラ哨戒班（作詞・作曲：Orangestar）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1245,7 +1280,7 @@
                     </div>
                     <div class="swiper-slide slidepage2 ss_slider2">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>キミにもらったもの
+                            <audio id="music_1" src="music/after/READY_STEADY_GO_(Game_Version).oga" style="display:none"></audio>READY STEADY GO（作詞：hyde　作曲：tetsu）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1253,7 +1288,7 @@
                     </div>
                     <div class="swiper-slide slidepage2 ss_slider2">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>八月のif
+                            <audio id="music_1" src="music/after/Redo.oga" style="display:none"></audio>Redo（作詞：ミズノゲンキ　作曲：宮崎誠）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1261,175 +1296,7 @@
                     </div>
                     <div class="swiper-slide slidepage2 ss_slider2">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Time Lapse
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage2 ss_slider2">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>クリスマスのうた
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage2 ss_slider2">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>B.O.F
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage2 ss_slider2">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>CiRCLING
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage2 ss_slider2">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>どきどきSING OUT!
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage2 ss_slider2">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Don’t be afraid!
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage2 ss_slider2">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>花園電気ギター！！！
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage2 ss_slider2">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>チョコレイトの低音レシピ
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage2 ss_slider2">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>遠い音楽～ハートビート～
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage2 ss_slider2">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>す、好きなんかじゃない！
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage2 ss_slider2">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Happy Happy Party！
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage2 ss_slider2">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>夏のドーン！
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage2 ss_slider2">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>空色デイズ（作詞：meg rock　作曲：齋藤真也）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage2 ss_slider2">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Alchemy（作詞・作曲：麻枝准）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage2 ss_slider2">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>光るなら（作詞・作曲：Goose house）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage2 ss_slider2">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Little Busters!（作詞・作曲：麻枝准）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage2 ss_slider2">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>正解はひとつ!じゃない!!（作詞：畑亜貴　作曲：山口朗彦）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage2 ss_slider2">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>God knows…（作詞：畑亜貴　作曲：神前暁）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage2 ss_slider2">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>only my railgun（作詞：八木沼悟志/yuki-ka　作曲：八木沼悟志）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage2 ss_slider2">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>千本桜（作詞・作曲：黒うさP）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage2 ss_slider2">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>君じゃなきゃダメみたい（作詞・作曲：大石昌良）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage2 ss_slider2">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>メランコリック（作詞・作曲：Junky）
+                            <audio id="music_1" src="music/after/Pride Kakumei.oga" style="display:none"></audio>プライド革命（作詞・作曲：HoneyWorks）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1447,7 +1314,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide slidepage3 ss_slider3">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Yes! BanG_Dream!
+                            <audio id="music_1" src="music/Pastel/Shuwarin☆Drea_min_(Game_Version).oga" style="display:none"></audio>しゅわりん☆どり〜みん
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1455,7 +1322,7 @@
                     </div>
                     <div class="swiper-slide slidepage3 s_slider3">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>ぽっぴん’しゃっふる
+                            <audio id="music_1" src="music/Pastel/Hanamaru◎Andante_(Game_Version).oga" style="display:none"></audio>はなまる◎アンダンテ
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1463,7 +1330,7 @@
                     </div>
                     <div class="swiper-slide slidepage3 m_slider3">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>STAR BEAT!〜ホシノコドウ〜
+                            <audio id="music_1" src="music/Pastel/Pasu_Pare_Revolution☆_(Game_Version).oga" style="display:none"></audio>パスパレボリューションず☆
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1471,7 +1338,7 @@
                     </div>
                     <div class="swiper-slide slidepage3">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>夏空 SUN! SUN! SEVEN!
+                            <audio id="music_1" src="music/Pastel/Yura_Yura_Ring-Dong-Dance_(Game_Version).oga" style="display:none"></audio>ゆら・ゆらRing-Dong-Dance
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1479,7 +1346,7 @@
                     </div>
                     <div class="swiper-slide slidepage3 m_slider3">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>走り始めたばかりのキミに
+                            <audio id="music_1" src="music/Pastel/SURVIVOR_Never_Give_Up!_(Game_Version).oga" style="display:none"></audio>SURVIVORねばーぎぶあっぷ
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1487,7 +1354,7 @@
                     </div>
                     <div class="swiper-slide slidepage3 s_slider3">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>ティアドロップス
+                            <audio id="music_1" src="music/Pastel/Secret_base___kimi_ga_kureta_mono__(Game_Version).oga" style="display:none"></audio>secret base 〜君がくれたもの〜（作詞・作曲：町田紀彦）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1495,7 +1362,7 @@
                     </div>
                     <div class="swiper-slide slidepage3 ss_slider3">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>ときめきエクスペリエンス！
+                            <audio id="music_1" src="music/Pastel/Dream_Parade_(Game_Version).oga" style="display:none"></audio>ドリームパレード（作詞：渡辺徹/森月キャス　作曲：渡辺徹）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1503,7 +1370,7 @@
                     </div>
                     <div class="swiper-slide slidepage3 ss_slider3">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>1000回潤んだ空
+                            <audio id="music_1" src="music/Pastel/Sobakasu_(Game_Version).oga" style="display:none"></audio>そばかす（作詞：YUKI　作曲：恩田快人）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1511,7 +1378,7 @@
                     </div>
                     <div class="swiper-slide slidepage3 ss_slider3">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>キラキラだとか夢だとか ～Sing Girls～
+                            <audio id="music_1" src="music/Pastel/MOON_PRIDE_(Game_VersioN).oga" style="display:none"></audio>MOON PRIDE（作詞・作曲：Revo）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1519,7 +1386,7 @@
                     </div>
                     <div class="swiper-slide slidepage3 ss_slider3">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>前へススメ！
+                            <audio id="music_1" src="music/Pastel/Fuwa_Fuwa_Time_(Game_Version).oga" style="display:none"></audio>ふわふわ時間（作詞：秋山澪　作曲：前澤寛之）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1527,7 +1394,7 @@
                     </div>
                     <div class="swiper-slide slidepage3 ss_slider3">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>夢みるSunflower
+                            <audio id="music_1" src="music/Pastel/Hanamaru_Pippi_wa_Yoiko_Dake_(Game_Version).oga" style="display:none"></audio>はなまるぴっぴはよいこだけ（作詞：あさき　作曲：96）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1535,7 +1402,7 @@
                     </div>
                     <div class="swiper-slide slidepage3 ss_slider3">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>キミにもらったもの
+                            <audio id="music_1" src="music/Pastel/Sekai wa Koi ni Ochiteiru.oga" style="display:none"></audio>世界は恋に落ちている（作詞・作曲：HoneyWorks）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1543,188 +1410,13 @@
                     </div>
                     <div class="swiper-slide slidepage3 ss_slider3">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>八月のif
+                            <audio id="music_1" src="music/Pastel/Happy_Synthesizer.oga" style="display:none"></audio>ハッピーシンセサイザ（作詞・作曲：BETTI）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
                         </div>
                     </div>
-                    <div class="swiper-slide slidepage3 ss_slider3">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Time Lapse
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage3 ss_slider3">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>クリスマスのうた
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage3 ss_slider3">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>B.O.F
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage3 ss_slider3">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>CiRCLING
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage3 ss_slider3">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>どきどきSING OUT!
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage3 ss_slider3">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Don’t be afraid!
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage3 ss_slider3">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>花園電気ギター！！！
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage3 ss_slider3">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>チョコレイトの低音レシピ
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage3 ss_slider3">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>遠い音楽～ハートビート～
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage3 ss_slider3">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>す、好きなんかじゃない！
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage3 ss_slider3">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Happy Happy Party！
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage3 ss_slider3">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>夏のドーン！
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage3 ss_slider3">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>空色デイズ（作詞：meg rock　作曲：齋藤真也）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage3 ss_slider3">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Alchemy（作詞・作曲：麻枝准）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage3 ss_slider3">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>光るなら（作詞・作曲：Goose house）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage3 ss_slider3">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Little Busters!（作詞・作曲：麻枝准）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage3 ss_slider3">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>正解はひとつ!じゃない!!（作詞：畑亜貴　作曲：山口朗彦）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage3 ss_slider3">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>God knows…（作詞：畑亜貴　作曲：神前暁）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage3 ss_slider3">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>only my railgun（作詞：八木沼悟志/yuki-ka　作曲：八木沼悟志）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage3 ss_slider3">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>千本桜（作詞・作曲：黒うさP）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage3 ss_slider3">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>君じゃなきゃダメみたい（作詞・作曲：大石昌良）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage3 ss_slider3">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>メランコリック（作詞・作曲：Junky）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
+
                 </div>
                 <!-- <div class="swiper-pagination"></div> -->
             </div>
@@ -1737,7 +1429,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide slidepage4 ss_slider4">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Yes! BanG_Dream!
+                            <audio id="music_1" src="music/roselia/BLACK_SHOUT_(Game_Version).oga" style="display:none"></audio>BLACK SHOUT
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1745,7 +1437,7 @@
                     </div>
                     <div class="swiper-slide slidepage4 s_slider4">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>ぽっぴん’しゃっふる
+                            <audio id="music_1" src="music/roselia/LOUDER_(Game_Version).oga" style="display:none"></audio>LOUDER
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1753,7 +1445,7 @@
                     </div>
                     <div class="swiper-slide slidepage4 m_slider4">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>STAR BEAT!〜ホシノコドウ〜
+                            <audio id="music_1" src="music/roselia/Rebirth_day_(Game_Version).oga" style="display:none"></audio>Re:birth day
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1761,7 +1453,7 @@
                     </div>
                     <div class="swiper-slide slidepage4">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>夏空 SUN! SUN! SEVEN!
+                            <audio id="music_1" src="music/roselia/Hidamari_Rhodonite_(Game_Version).oga" style="display:none"></audio>陽だまりロードナイト
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1769,7 +1461,7 @@
                     </div>
                     <div class="swiper-slide slidepage4 m_slider4">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>走り始めたばかりのキミに
+                            <audio id="music_1" src="music/roselia/Nesshoku_Starmine_(Game_Version).oga" style="display:none"></audio>熱色スターマイン
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1777,7 +1469,7 @@
                     </div>
                     <div class="swiper-slide slidepage4 s_slider4">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>ティアドロップス
+                            <audio id="music_1" src="music/roselia/－HEROIC_ADVENT－_(Game_Version).oga" style="display:none"></audio>-HEROIC ADVENT-
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1785,7 +1477,7 @@
                     </div>
                     <div class="swiper-slide slidepage4 ss_slider4">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>ときめきエクスペリエンス！
+                            <audio id="music_1" src="music/roselia/Determination_Symphony_(Game_Version).oga" style="display:none"></audio>Determination Symphony
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1793,7 +1485,7 @@
                     </div>
                     <div class="swiper-slide slidepage4 ss_slider4">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>1000回潤んだ空
+                            <audio id="music_1" src="music/roselia/ONENESS_(Game_version).oga" style="display:none"></audio>ONENESS
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1801,7 +1493,7 @@
                     </div>
                     <div class="swiper-slide slidepage4 ss_slider4">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>キラキラだとか夢だとか ～Sing Girls～
+                            <audio id="music_1" src="music/roselia/Tamashii_no_Refrain_(Game_Version).oga" style="display:none"></audio>魂のルフラン（作詞：及川眠子　作曲：大森俊之）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1809,7 +1501,7 @@
                     </div>
                     <div class="swiper-slide slidepage4 ss_slider4">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>前へススメ！
+                            <audio id="music_1" src="music/roselia/Hacking_to_the_Gate_(Game_Version).oga" style="display:none"></audio>Hacking to the Gate（作詞・作曲：志倉千代丸）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1817,7 +1509,7 @@
                     </div>
                     <div class="swiper-slide slidepage4 ss_slider4">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>夢みるSunflower
+                            <audio id="music_1" src="music/roselia/ETERNAL_BLAZE_(Game_Version).oga" style="display:none"></audio>ETERNAL BLAZE（作詞：水樹奈々　作曲：上松範康（Elements Garden））
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1825,7 +1517,7 @@
                     </div>
                     <div class="swiper-slide slidepage4 ss_slider4">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>キミにもらったもの
+                            <audio id="music_1" src="music/roselia/Guren_no_Yumiya_(Game_Version).oga" style="display:none"></audio>紅蓮の弓矢（作詞・作曲：Revo）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1833,7 +1525,7 @@
                     </div>
                     <div class="swiper-slide slidepage4 ss_slider4">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>八月のif
+                            <audio id="music_1" src="music/roselia/The_Everlasting_Guilty_Crown_(Game_Version).oga" style="display:none"></audio>The Everlasting Guilty Crown（作詞・作曲：ryo（supercell））
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1841,7 +1533,7 @@
                     </div>
                     <div class="swiper-slide slidepage4 ss_slider4">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Time Lapse
+                            <audio id="music_1" src="music/roselia/Red_fraction_(Game_Version).oga" style="display:none"></audio>Red fraction（作詞：MELL　作曲：高瀬一矢）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1849,7 +1541,7 @@
                     </div>
                     <div class="swiper-slide slidepage4 ss_slider4">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>クリスマスのうた
+                            <audio id="music_1" src="music/roselia/Shin_Ai_(Game_Version).oga" style="display:none"></audio>深愛（作詞：水樹奈々　作曲：上松範康（Elements Garden））
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -1857,164 +1549,13 @@
                     </div>
                     <div class="swiper-slide slidepage4 ss_slider4">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>B.O.F
+                            <audio id="music_1" src="music/roselia/Zankoku na Tenshi no Thesis.oga" style="display:none"></audio>残酷な天使のテーゼ（作詞：及川眠子　作曲：佐藤英敏）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
                         </div>
                     </div>
-                    <div class="swiper-slide slidepage4 ss_slider4">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>CiRCLING
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage4 ss_slider4">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>どきどきSING OUT!
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage4 ss_slider4">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Don’t be afraid!
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage4 ss_slider4">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>花園電気ギター！！！
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage4 ss_slider4">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>チョコレイトの低音レシピ
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage4 ss_slider4">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>遠い音楽～ハートビート～
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage4 ss_slider4">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>す、好きなんかじゃない！
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage4 ss_slider4">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Happy Happy Party！
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage4 ss_slider4">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>夏のドーン！
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage4 ss_slider4">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>空色デイズ（作詞：meg rock　作曲：齋藤真也）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage4 ss_slider4">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Alchemy（作詞・作曲：麻枝准）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage4 ss_slider4">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>光るなら（作詞・作曲：Goose house）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage4 ss_slider4">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Little Busters!（作詞・作曲：麻枝准）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage4 ss_slider4">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>正解はひとつ!じゃない!!（作詞：畑亜貴　作曲：山口朗彦）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage4 ss_slider4">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>God knows…（作詞：畑亜貴　作曲：神前暁）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage4 ss_slider4">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>only my railgun（作詞：八木沼悟志/yuki-ka　作曲：八木沼悟志）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage4 ss_slider4">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>千本桜（作詞・作曲：黒うさP）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage4 ss_slider4">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>君じゃなきゃダメみたい（作詞・作曲：大石昌良）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage4 ss_slider4">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>メランコリック（作詞・作曲：Junky）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
+
                 </div>
                 <!-- <div class="swiper-pagination"></div> -->
             </div>
@@ -2027,55 +1568,47 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide slidepage5 ss_slider5 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Yes! BanG_Dream!
+                            <audio id="music_1" src="music/happy/Egao_no_Orchestra!_(Game_Version).oga" style="display:none"></audio>えがおのオーケストラっ！
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
                         </div>
                     </div>
-                    <div class="swiper-slide slidepage5 s_slider5" >
+                    <div class="swiper-slide slidepage5 s_slider5">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>ぽっぴん’しゃっふる
+                            <audio id="music_1" src="music/happy/Goka!_Gokai!_Phantom_Thief!_(Game_Version).oga" style="display:none"></audio>ゴーカ！　ごーかい！？　ファントムシーフ！
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
                         </div>
                     </div>
-                    <div class="swiper-slide slidepage5 m_slider5" >
+                    <div class="swiper-slide slidepage5 m_slider5">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>STAR BEAT!〜ホシノコドウ〜
+                            <audio id="music_1" src="music/happy/Happiness!_Happy_Magical♪_(Game_Version).oga" style="display:none"></audio>ハピネスっ！ハピィーマジカルっ♪
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
                         </div>
                     </div>
                     <div class="swiper-slide slidepage5">
-                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>夏空 SUN! SUN! SEVEN!
+                        <div class="bg-img1">
+                            <audio id="music_1" src="music/happy/Sekai_Nobbinobi_Treasure!_(Game_Version).oga" style="display:none"></audio>せかいのっびのびトレジャー！
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
                         </div>
                     </div>
-                    <div class="swiper-slide slidepage5 m_slider5" >
+                    <div class="swiper-slide slidepage5 m_slider5">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>走り始めたばかりのキミに
+                            <audio id="music_1" src="music/happy/YAPPY!_SCHOOL_CARNIVAL☆彡_(Game_Version).oga" style="display:none"></audio>YAPPY！SCHOOL CARNIVAL☆彡
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
                         </div>
                     </div>
-                    <div class="swiper-slide slidepage5 s_slider5" >
+                    <div class="swiper-slide slidepage5 s_slider5">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>ティアドロップス
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage5 ss_slider5 ">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>ときめきエクスペリエンス！
+                            <audio id="music_1" src="music/happy/Wacha-Mocha-Pettan_Koushinkyoku.oga" style="display:none"></audio>わちゃ・もちゃ・ぺったん行進曲
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -2083,7 +1616,7 @@
                     </div>
                     <div class="swiper-slide slidepage5 ss_slider5 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>1000回潤んだ空
+                            <audio id="music_1" src="music/happy/Sugar_Song_to_Bitter_Step_(Game_Version).oga" style="display:none"></audio>シュガーソングとビターステップ（作詞・作曲：田淵智也）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -2091,7 +1624,7 @@
                     </div>
                     <div class="swiper-slide slidepage5 ss_slider5 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>キラキラだとか夢だとか ～Sing Girls～
+                            <audio id="music_1" src="music/happy/1,_2_Fanclub_(Game_Version).oga" style="display:none"></audio>いーあるふぁんくらぶ（作詞・作曲：みきとP）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -2099,7 +1632,7 @@
                     </div>
                     <div class="swiper-slide slidepage5 ss_slider5 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>前へススメ！
+                            <audio id="music_1" src="music/happy/Silhouette_(Game_Version).oga" style="display:none"></audio>シルエット（作詞・作曲：谷口鮪）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -2107,7 +1640,7 @@
                     </div>
                     <div class="swiper-slide slidepage5 ss_slider5 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>夢みるSunflower
+                            <audio id="music_1" src="music/happy/Happy_Summer_Wedding_(Game_Version).oga" style="display:none"></audio>ハッピーサマーウェディング（作詞・作曲：つんく）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -2115,7 +1648,7 @@
                     </div>
                     <div class="swiper-slide slidepage5 ss_slider5 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>キミにもらったもの
+                            <audio id="music_1" src="music/happy/Himawari_no_Yakusoku_(Game_Version).oga" style="display:none"></audio>ひまわりの約束（作詞・作曲：秦基博）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -2123,7 +1656,7 @@
                     </div>
                     <div class="swiper-slide slidepage5 ss_slider5 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>八月のif
+                            <audio id="music_1" src="music/happy/Romeo_(Game_Version).oga" style="display:none"></audio>ロメオ（作詞・作曲：HoneyWorks）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -2131,7 +1664,7 @@
                     </div>
                     <div class="swiper-slide slidepage5 ss_slider5 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Time Lapse
+                            <audio id="music_1" src="music/happy/Koi wa Chaos no Shimobe Nari.oga" style="display:none"></audio>恋は混沌の隷也（作詞：畑亜貴　作曲：田中秀和（MONACA））
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -2139,167 +1672,7 @@
                     </div>
                     <div class="swiper-slide slidepage5 ss_slider5 ">
                         <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>クリスマスのうた
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage5 ss_slider5 ">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>B.O.F
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage5 ss_slider5 ">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>CiRCLING
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage5 ss_slider5 ">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>どきどきSING OUT!
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage5 ss_slider5 ">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Don’t be afraid!
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage5 ss_slider5 ">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>花園電気ギター！！！
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage5 ss_slider5 ">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>チョコレイトの低音レシピ
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage5 ss_slider5 ">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>遠い音楽～ハートビート～
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage5 ss_slider5 ">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>す、好きなんかじゃない！
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage5 ss_slider5 ">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Happy Happy Party！
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage5 ss_slider5 ">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>夏のドーン！
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage5 ss_slider5 ">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>空色デイズ（作詞：meg rock　作曲：齋藤真也）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage5 ss_slider5 ">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Alchemy（作詞・作曲：麻枝准）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage5 ss_slider5 ">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>光るなら（作詞・作曲：Goose house）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage5 ss_slider5 ">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>Little Busters!（作詞・作曲：麻枝准）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage5 ss_slider5 ">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>正解はひとつ!じゃない!!（作詞：畑亜貴　作曲：山口朗彦）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage5 ss_slider5 ">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>God knows…（作詞：畑亜貴　作曲：神前暁）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage5 ss_slider5 ">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>only my railgun（作詞：八木沼悟志/yuki-ka　作曲：八木沼悟志）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage5 ss_slider5 ">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>千本桜（作詞・作曲：黒うさP）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage5 ss_slider5 ">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>君じゃなきゃダメみたい（作詞・作曲：大石昌良）
-                            <button class="btn music-btn" data-musicId="1">
-                                <i class="far fa-play-circle fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slidepage5 ss_slider5 ">
-                        <div class="bg-img1">
-                            <audio id="music_1" src="music/林俊傑 JJ Lin - 偉大的渺小 Little Big Us (華納 Official HD 官方MV).mp3" style="display:none"></audio>メランコリック（作詞・作曲：Junky）
+                            <audio id="music_1" src="music/happy/Dragon_Night.oga" style="display:none"></audio>Dragon Night（作詞・作曲：Fukase）
                             <button class="btn music-btn" data-musicId="1">
                                 <i class="far fa-play-circle fa-2x"></i>
                             </button>
@@ -2356,6 +1729,39 @@
     <script src="js/utils.js"></script>
     <script src="js/lightbox.min.js"></script>
 
+    <!-- smooth scroll -->
+    <script>
+        $(function () {
+            $('a[href*="#"]:not([href="#"])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    console.log(target);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top - 68
+                        }, 1500);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop();
+            var banner_h = $(".bannerall").height();
+            var nav = $(".navbar");
+            if (scrollTop >= banner_h) {
+                nav.addClass("fixed");
+            } else {
+                nav.removeClass("fixed");
+            }
+
+        });
+
+    </script>
     <script>
         AOS.init();
     </script>
@@ -2432,32 +1838,32 @@
     <script>
         $(".m_1logo").click(function () {
             $(".music_bottom").removeClass("active")
-            
+
             $(".page1").addClass("active")
         })
         $(".m_2logo").click(function () {
             $(".music_bottom").removeClass("active")
-            
+
             $(".page2").addClass("active")
         })
         $(".m_3logo").click(function () {
             $(".music_bottom").removeClass("active")
-            
+
             $(".page3").addClass("active")
         })
         $(".m_4logo").click(function () {
             $(".music_bottom").removeClass("active")
-            
+
             $(".page4").addClass("active")
         })
         $(".m_5logo").click(function () {
             $(".music_bottom").removeClass("active")
-            
+
             $(".page5").addClass("active")
         })
 
-        
-        
+
+
     </script>
 
     <script>
@@ -2565,13 +1971,13 @@
                 element.classList.remove('m_slider3');
                 element.classList.add('ss_slider3');
             }
-            var slider3_1 =s_slides3[swiper3.activeIndex];
-            var slider3_2 =s_slides3[swiper3.activeIndex + 1];
-            var slider3_3 =s_slides3[swiper3.activeIndex + 2];
-            var slider3_4 =s_slides3[swiper3.activeIndex + 3];
-            var slider3_5 =s_slides3[swiper3.activeIndex + 4];
-            var slider3_6 =s_slides3[swiper3.activeIndex + 5];
-            var slider3_7 =s_slides3[swiper3.activeIndex + 6];
+            var slider3_1 = s_slides3[swiper3.activeIndex];
+            var slider3_2 = s_slides3[swiper3.activeIndex + 1];
+            var slider3_3 = s_slides3[swiper3.activeIndex + 2];
+            var slider3_4 = s_slides3[swiper3.activeIndex + 3];
+            var slider3_5 = s_slides3[swiper3.activeIndex + 4];
+            var slider3_6 = s_slides3[swiper3.activeIndex + 5];
+            var slider3_7 = s_slides3[swiper3.activeIndex + 6];
 
             var x = $("div.music.music_bottom").children(".btn");
             console.log(x);
